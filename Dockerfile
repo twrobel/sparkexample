@@ -11,4 +11,4 @@ RUN ["mvn", "compile"]
 
 RUN ["mvn", "install"]
 
-CMD ["java", "-cp", "target/myapp-1.0-SNAPSHOT.jar", "HelloSpark"]
+CMD ["java", "-cp", "target/sparkle-1.0-SNAPSHOT.jar", "HelloSpark"]
