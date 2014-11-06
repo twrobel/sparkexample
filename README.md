@@ -1,13 +1,13 @@
 A minimal example build with Docker and http://sparkjava.com/
 
 
-# build:  
+* build:  
 
 ``` 
 $ docker build -t giantswarm/sparkexample .
 ```
 
-# run:
+* run:
 
 ```
 $ docker run -p 4567:4567 giantswarm/sparkexample
