@@ -6,7 +6,7 @@ COMPANY = giantswarm
 build:
 	docker build -t $(REGISTRY)/$(COMPANY)/$(PROJECT) .
 
-run:
+run: build
 	docker run -p 4567:4567 $(REGISTRY)/$(COMPANY)/$(PROJECT)
 
 push:
