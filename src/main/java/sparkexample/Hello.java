@@ -23,9 +23,9 @@ public class Hello {
         ResultSet rs = null;
         String result = "";
 
-    	String addr = System.getenv("DB_PORT_5432_TCP_ADDR");
-    	String port = System.getenv("DB_PORT_5432_TCP_PORT");
-        String url = "jdbc:postgresql://"+addr+":"+port+"/postgres"; //default database
+    	String addr = System.getenv("DATABASE_PORT_5432_TCP_ADDR");
+    	String port = System.getenv("DATABASE_PORT_5432_TCP_PORT");
+        String url = "jdbc:postgresql://" + addr + ":" + port + "/postgres"; //default database
         String user = System.getenv("POSTGRES_USER");
         String password = System.getenv("POSTGRES_PASSWORD");
 
