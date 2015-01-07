@@ -1,4 +1,4 @@
-db:
+database:
   image: postgres:latest
   ports:
     - "5432"
@@ -10,7 +10,7 @@ web:
   ports:
     - "4567:4567"
   links:
-    - db
+    - database
   environment:
     POSTGRES_PASSWORD: mypostgrespass
     POSTGRES_USER: mypostgresuser
