@@ -1,0 +1,6 @@
+{
+    "giantswarm/dev": {
+		"POSTGRES_PASSWORD": "mysecretpassword",
+		"POSTGRES_USER": "mypostgresuser"
+	}
+}
