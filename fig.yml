@@ -1,0 +1,10 @@
+db:
+  image: postgres
+  ports:
+    - "5432"
+web:
+  build: .
+  ports:
+    - "4567:4567"
+  links:
+    - db

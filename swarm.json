@@ -8,7 +8,21 @@
                     "component_name": "sparkexample",
                     "image": "registry.giantswarm.io/giantswarm/sparkexample",
                     "ports": [ "4567/tcp" ],
-                    "domains": { "hellospark.gigantic.io": "4567" }
+                    "domains": { "hellospark.gigantic.io": "4567" },
+                    "dependencies": [
+                        {
+                            "name": "database",
+                            "port": 5432
+                        }
+                    ]
+                },
+                {
+                    "component_name": "database",
+                    "image": "postgres",
+                    "ports": [ "5432/tcp" ],
+                    "env": [
+                        "POSTGRES_PASSWORD=mysecretpassword"
+                    ]
                 }
             ]
         }
