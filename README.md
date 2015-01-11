@@ -1,9 +1,9 @@
 # Get started with Java and Postgres on GiantSwarm.io
 
-A small example leveraring Docker, [Sparkjava](http://sparkjava.com) and [giantswarm.io](http://giantSwarm.io) for a super fast headstart on creating a *live* app with Java and Postgres.
+A small example leveraring Docker, [Sparkjava](http://sparkjava.com) and [giantswarm.io](http://giantswarm.io) for a super fast headstart on creating a *live* app with Java and Postgres.
 
 ## Prerequisites
-You need Git, Make and Docker installed and a free Giant Swarm account. [Request a invite](http://giantSwarm.io)!
+You need Git, Make and Docker installed and a free Giant Swarm account. [Request a invite](http://giantswarm.io)!
 
 ## Steps
 
