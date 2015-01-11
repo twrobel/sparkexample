@@ -6,12 +6,12 @@ COMPANY :=  $(shell swarm user)
 build:
 	docker build -t $(REGISTRY)/$(COMPANY)/$(PROJECT) .
 
-test-database: build
+run-test-database: build
 	docker run --rm -p 5432:5432\
 	 -e "POSTGRES_USER=mypostgresuser" -e "POSTGRES_PASSWORD=mysecretpassword"\
 	 --name database postgres:latest
 
-test-web: build	
+run-test-application: build	
 	docker run --rm -p 4567:4567 -e "POSTGRES_USER=mypostgresuser" -e "POSTGRES_PASSWORD=mysecretpassword" --link database:database $(REGISTRY)/$(COMPANY)/$(PROJECT)
 
 push: build
