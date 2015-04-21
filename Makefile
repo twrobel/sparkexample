@@ -5,16 +5,11 @@ COMPANY = giantswarm
 
 build:
 	docker build -t $(REGISTRY)/$(COMPANY)/$(PROJECT) .
-
-run:
-	docker run -p 4567:4567 $(REGISTRY)/$(COMPANY)/$(PROJECT)
+	docker run -v /Users/mdl/workspace/github/sparkexample/target:/target $(REGISTRY)/$(COMPANY)/$(PROJECT) cp target/sparkexample-jar-with-dependencies.jar /target
+	docker build -f Dockerfile-run -t $(REGISTRY)/$(COMPANY)/$(PROJECT)-run .
 
 push:
 	docker push $(REGISTRY)/$(COMPANY)/$(PROJECT)
 
-
-build-run:
-	docker build -f Dockerfile-run -t $(REGISTRY)/$(COMPANY)/$(PROJECT)-run .
-
-run-run:
+run:
 	docker run -p 4567:4567 $(REGISTRY)/$(COMPANY)/$(PROJECT)-run
