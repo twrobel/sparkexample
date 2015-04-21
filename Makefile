@@ -5,7 +5,7 @@ COMPANY = giantswarm
 
 build:
 	docker build -t $(REGISTRY)/$(COMPANY)/$(PROJECT) .
-	docker run -v /Users/mdl/workspace/github/sparkexample/target:/target $(REGISTRY)/$(COMPANY)/$(PROJECT) cp target/sparkexample-jar-with-dependencies.jar /target
+	docker run -v ${PWD}/target:/target $(REGISTRY)/$(COMPANY)/$(PROJECT) cp target/sparkexample-jar-with-dependencies.jar /target
 	docker build -f Dockerfile-run -t $(REGISTRY)/$(COMPANY)/$(PROJECT)-run .
 
 push:
