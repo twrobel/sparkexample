@@ -1,6 +1,6 @@
 FROM java:8-jre
 
-ADD sparkexample-jar-with-dependencies.jar .
+ADD target/sparkexample-jar-with-dependencies.jar .
 
 EXPOSE 4567
 
